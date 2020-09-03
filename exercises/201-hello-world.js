@@ -6,9 +6,18 @@
 // - hello('DETROIT') should return 'Hello, DETROIT!'
 
 function hello(aName) {
-    console.log("Hello, " + aName + "!");
+    return `Hello, ${aName}!`;
 }
+
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 // Write a function "helloDefault" such that if no name is given it will return
 // 'Hello, world!'
 // Otherwise it behaves the same as the "hello" function.
+
+function helloDefault(aName) {
+    if (aName) {
+        return `Hello, ${aName}!`;
+    } else {
+        return 'Hello world!';
+    }
+}
