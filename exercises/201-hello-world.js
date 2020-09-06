@@ -5,8 +5,8 @@
 // - hello('banana') should return 'Hello, banana!'
 // - hello('DETROIT') should return 'Hello, DETROIT!'
 
-function hello(aName) {
-    return `Hello, ${aName}!`;
+function hello(name) {
+    return `Hello, ${name}!`;
 }
 
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -18,6 +18,6 @@ function helloDefault(aName) {
     if (aName) {
         return `Hello, ${aName}!`;
     } else {
-        return 'Hello world!';
+        return 'Hello, world!';
     }
 }
