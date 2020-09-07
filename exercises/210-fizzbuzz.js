@@ -9,3 +9,21 @@
 // Examples:
 // fizzbuzz(3) --> '..fizz'
 // fizzbuzz(15) --> '..fizz.buzzfizz..fizzbuzz.fizz..fizzbuzz'
+
+function fizzbuzz(num) {
+    var fizzBuzz = "";
+    for (var i = 1; i <= num; i++) {
+        if (i % 3 !== 0 && i % 5 !== 0) {
+            fizzBuzz += ".";
+        } else if (i % 3 === 0 && i % 5 !== 0) {
+            fizzBuzz += "fizz";
+        } else if (i % 3 !== 0 && i % 5 === 0) {
+            fizzBuzz += "buzz";
+        } else if (i % 3 === 0 && i % 5 === 0) {
+            fizzBuzz += "fizzbuzz";
+        }
+    }
+    return fizzBuzz;
+}
+
+console.log(fizzbuzz(15));

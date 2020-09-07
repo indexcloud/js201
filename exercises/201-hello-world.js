@@ -14,10 +14,10 @@ function hello(name) {
 // 'Hello, world!'
 // Otherwise it behaves the same as the "hello" function.
 
-function helloDefault(aName) {
-    if (aName) {
-        return `Hello, ${aName}!`;
+function helloDefault(name) {
+    if (name) {
+        return `Hello, ${name}!`;
     } else {
-        return 'Hello, world!';
+        return "Hello, world!";
     }
 }
