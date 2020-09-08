@@ -5,15 +5,28 @@
 // numberJoinerWhile(1, 10) --> '1_2_3_4_5_6_7_8_9_10'
 // numberJoinerWhile(12, 14) --> '12_13_14'
 
-function numberJointerWhile() {
-    
+function numberJoinerWhile(num1, num2) {
+    var str = "_";
+    var newStr = num1.toString();
+    while (num1 < num2) {
+        num1++;
+        newStr += str + num1;
+    }
+    return newStr;
 }
 
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 // Write a function "numberJoinerFor" which does the same thing as "numberJoinerWhile",
 // except using a "for" loop internally.
 
-
+function numberJoinerFor(num1, num2) {
+    var str = "_";
+    var newStr = num1.toString();
+    for (var i = num1 + 1; i <= num2; i++) {
+        newStr += str + i;
+    }
+    return newStr;
+}
 
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 // Write a function "numberJoinerFancy" which does the same thing as "numberJoinerWhile",
@@ -23,3 +36,16 @@ function numberJointerWhile() {
 // numberJoinerFancy(1, 10) --> '1_2_3_4_5_6_7_8_9_10'
 // numberJoinerFancy(1, 5, '~') --> 1~2~3~4~5
 // numberJoinerFancy(3, 6, '***BANANAS***') --> 1***BANANAS***2***BANANAS***3
+
+function numberJoinerFancy(num1, num2, argument) {
+    var str = "_";
+    var newStr = num1.toString();
+    for (var i = num1 + 1; i <= num2; i++) {
+        if (!argument) {
+            newStr += str + i;
+        } else {
+            newStr += argument + i;
+        }   
+    }
+    return newStr;
+}
