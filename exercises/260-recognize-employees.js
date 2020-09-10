@@ -15,3 +15,17 @@
 // > ['Great job, Susan!', 'Great job, Anthony!', 'Great job, Bill!']
 //
 // Hint: What is the best data structure for the employees of the month list?
+
+function recognizeEmployees(arrayNames, arrayEmployees) {
+    var newArr = [];
+    for (var i = 0; i < arrayEmployees.length; i++) {
+        for (var j = 0; j < arrayNames.length; j++) {
+            if (arrayEmployees[i] === arrayNames[j]) {
+                newArr.push(`Outstanding job, ${arrayEmployees[i]}!`);
+            } else {
+                newArr.push(`Great job, ${arrayNames[j]}!`); //
+            }
+        }
+    }
+    return newArr;
+}
